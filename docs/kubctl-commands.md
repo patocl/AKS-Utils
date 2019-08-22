@@ -14,6 +14,68 @@ kubectl from Kubernetes docs Page <https://kubernetes.io/docs/reference/kubectl/
 Exists alot places that explain this tool for Kubernetes Services, so I don't want t repeat myself, if you want to know how install see this video please
 <https://www.youtube.com/watch?v=5-LHcpkRA58> that's explain how to install it and Minikube too :D
 
+Instructions from Microsoft
+<https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough#connect-to-the-cluster>
+
+## Connect to the cluster
+
+To manage a Kubernetes cluster, you use kubectl, the Kubernetes command-line client. If you use Azure Cloud Shell, kubectl is already installed. To install kubectl locally, use the az aks install-cli command:
+
+``` bash
+>az aks install-cli
+```
+
+To configure kubectl to connect to your Kubernetes cluster, use the az aks get-credentials command. This command downloads credentials and configures the Kubernetes CLI to use them.
+
+``` bash
+>az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+```
+
+To verify the connection to your cluster, use the kubectl get command to return a list of the cluster nodes.
+
+``` bash
+>kubectl get nodes
+```
+
+The following example output shows the single node created in the previous steps. Make sure that the status of the node is Ready:
+
+| NAME | STATUS | ROLES | AGE | VERSION
+|---|---|---|---|---
+| aks-nodepool1-31718369-0 | Ready | agent | 6m44s | v1.12.8
+
+## To deploy an Application
+
+Deploy the application using the kubectl apply command and specify the name of your YAML manifest:
+
+``` bash
+kubectl apply -f azure-vote.yml
+```
+
+The result of it is
+
+``` bash
+deployment "azure-vote-back" created
+service "azure-vote-back" created
+deployment "azure-vote-front" created
+service "azure-vote-front" created
+```
+
+## Test the application
+
+When the application runs, a Kubernetes service exposes the application front end to the internet. This process can take a few minutes to complete.
+
+To monitor progress, use the kubectl get service command with the --watch argument.
+
+``` bash
+kubectl get service azure-vote-front --watch
+```
+
+Output
+
+| NAME | TYPE | CLUSTER-IP | EXTERNAL-IP | PORT(S) | AGE
+|---|---|---|---|---|---
+| azure-vote-front | LoadBalancer | 10.0.37.27 | ```<pending>``` | 80:30572/TCP | 6s
+
 ## Tips
 
 I like to use powershell to use kubectl, so use this command if u want to alias it by a shorten name
