@@ -46,6 +46,72 @@ Esample
 pip3 install numpy
 ```
 
+## Installing pyenv module for python based on Ububtu
+
+### Looking if is already installed
+
+This command allow to see if the module pyenv is installed
+
+``` bash
+apt-cache search pyenv
+```
+
+### Installing the module
+
+``` bash
+sudo apt-get install -y make build-essential git libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev
+```
+
+### download pyenv installer
+
+``` bash
+curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
+```
+
+### Setting the environment
+
+``` bash
+vi ~/.bashrc
+```
+
+Put at the end of this file the next line
+
+``` bash
+export PATH="/home/rootroot/.pyenv/bin:$PATH"
+```
+
+### validating the init
+
+``` bash
+eval "$(pyenv init -)"
+```
+
+``` bash
+eval "$(pyenv virtualenv-init -)"
+```
+
+### Exit from bash
+
+``` bash
+exit
+```
+
+### Install the desired version of pyenv
+
+Show the pyenv versions
+
+``` bash
+pyenv install -l
+```
+
+Install the version 3.7.4 for example
+
+``` bash
+pyenv install 3.7.4
+```
+
+Close terminals windows or restart Linux
+
 ## getting the version of Python
 
 ``` bash
