@@ -76,6 +76,17 @@ Output
 |---|---|---|---|---|---
 | azure-vote-front | LoadBalancer | 10.0.37.27 | ```<pending>``` | 80:30572/TCP | 6s
 
+## To view pods
+
+``` bash
+kubectl get pods
+```
+
+## To review logs
+
+``` bash
+kubectl logs podname
+```
 ## Tips
 
 I like to use powershell to use kubectl, so use this command if u want to alias it by a shorten name
@@ -83,7 +94,6 @@ I like to use powershell to use kubectl, so use this command if u want to alias 
 ``` bash
 PS>Set-Alias -Name k Value kubectl
 ```
-
 Examples of usage
 
 ``` bash
