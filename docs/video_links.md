@@ -95,3 +95,7 @@ Well, I have subscription thanks to my company, so I can enjoy watching videos r
   - **Kubernetes with Azure and Azure DevOps** <https://www.youtube.com/playlist?list=PLpbcUe4chE79s_9ZFNQpSRl8F0iSVhcM2>
   - Fundamentals of Kubernetes on Microsoft Azure and the road ahead - BRK3038 <https://www.youtube.com/watch?v=dUsyy6_wDpo>
   - **Azure AKS - Application Gateway & WAF** <https://www.youtube.com/watch?v=GkznBbNSq7U>
+
+## Notes
+
+All videos marked on Bold I already watched, I'm still having pending some, but I like the descriptions, so I will watch it as soon possible.
