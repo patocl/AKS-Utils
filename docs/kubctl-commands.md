@@ -87,6 +87,13 @@ kubectl get pods
 ``` bash
 kubectl logs podname
 ```
+
+## review the Ingress routing
+
+``` bash
+kubectl describe ingress basic-routing
+```
+
 ## Tips
 
 I like to use powershell to use kubectl, so use this command if u want to alias it by a shorten name
@@ -94,6 +101,7 @@ I like to use powershell to use kubectl, so use this command if u want to alias 
 ``` bash
 PS>Set-Alias -Name k Value kubectl
 ```
+
 Examples of usage
 
 ``` bash

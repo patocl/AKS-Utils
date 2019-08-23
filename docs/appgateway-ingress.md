@@ -4,6 +4,8 @@
 
 If you want more info related to this Controller review <https://github.com/patocl/application-gateway-kubernetes-ingress>
 
+if you want investigate what is Ingress Controller <https://kubernetes.github.io/ingress-nginx>
+
 ## How to install
 
 If you want detailed documentation please review too <https://azure.github.io/application-gateway-kubernetes-ingress>
