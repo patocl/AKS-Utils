@@ -31,14 +31,31 @@ It's was funny and curious for me! so If you listen Kubernetes or K8S it's the s
 
 The index it's just to link other document's, isn't ordered ;)
 
-* [Interesting videos about AKS](docs/video_links.md)
-* [minikube](docs/minikube.md)
-* [kubectl](docs/kubectl-commands.md)
-* [Monitoring Clusters](docs/monitoring/cluster.md)
-* [kv-injector](docs/kv-injector.md)
-* [Git Repos that Likes me!](docs/git-repos.md)
-* [Application Gateway + Ingress controller for Azure](docs/appgateway-ingress.md)
-* [Container Scanners](docs/container-scanners.md)
+* Kubernetes tools
+  * [kubectl](docs/kubectl-commands.md)
+  * [minikube](docs/minikube.md)
+  * [Helm](docs/helm.md)
+
+* Security
+  * [Container Scanners](docs/container-scanners.md)
+
+* Monitoring
+  * [Prometheus and Grafana](docs/monitoring_prometheus.md)
+  * [EKS](docs/monitoring_eks.md)
+
+* Controllers
+  * [Application Gateway + Ingress controller for Azure](docs/appgateway-ingress.md)
+  * [kv-injector](docs/kv-injector.md)
+
+* Likes me
+  * [Interesting videos about AKS](docs/video_links.md)
+  * [Git Repos that Likes me!](docs/git-repos.md)
+
+* Others
+  * [Git commands](docs/others/git-commands.md)
+  * [Git + Powershell](docs/others/git-powershell.md)
+  * [Python](docs/others/python.md)
+  * [VS Code](docs/others/vscode.md)
 
 @patocl
 Developer and Devops
