@@ -21,20 +21,20 @@ Instructions from Microsoft
 
 To manage a Kubernetes cluster, you use kubectl, the Kubernetes command-line client. If you use Azure Cloud Shell, kubectl is already installed. To install kubectl locally, use the az aks install-cli command:
 
-``` bash
->az aks install-cli
+``` powershell
+PS> az aks install-cli
 ```
 
 To configure kubectl to connect to your Kubernetes cluster, use the az aks get-credentials command. This command downloads credentials and configures the Kubernetes CLI to use them.
 
-``` bash
->az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
+``` powershell
+PS> az aks get-credentials --resource-group myResourceGroup --name myAKSCluster
 ```
 
 To verify the connection to your cluster, use the kubectl get command to return a list of the cluster nodes.
 
-``` bash
->kubectl get nodes
+``` powershell
+PS> kubectl get nodes
 ```
 
 The following example output shows the single node created in the previous steps. Make sure that the status of the node is Ready:
@@ -47,13 +47,8 @@ The following example output shows the single node created in the previous steps
 
 Deploy the application using the kubectl apply command and specify the name of your YAML manifest:
 
-``` bash
-kubectl apply -f azure-vote.yml
-```
-
-The result of it is
-
-``` bash
+``` powershell
+PS> kubectl apply -f azure-vote.yml
 deployment "azure-vote-back" created
 service "azure-vote-back" created
 deployment "azure-vote-front" created
@@ -66,8 +61,8 @@ When the application runs, a Kubernetes service exposes the application front en
 
 To monitor progress, use the kubectl get service command with the --watch argument.
 
-``` bash
-kubectl get service azure-vote-front --watch
+``` powershell
+PS> kubectl get service azure-vote-front --watch
 ```
 
 Output
@@ -78,38 +73,44 @@ Output
 
 ## To view pods
 
-``` bash
-kubectl get pods
+``` powershell
+PS> kubectl get pods
 ```
 
 ## To review logs
 
-``` bash
-kubectl logs podname
+``` powershell
+PS> kubectl logs podname
 ```
 
-## review the Ingress routing
+## Review the Ingress routing
 
-``` bash
-kubectl describe ingress basic-routing
+``` powershell
+PS> kubectl describe ingress basic-routing
+```
+
+## Delete all pods
+
+``` powershell
+PS> kubectl delete po --all
 ```
 
 ## Tips
 
 I like to use powershell to use kubectl, so use this command if u want to alias it by a shorten name
 
-``` bash
-PS>Set-Alias -Name k Value kubectl
+``` powershell
+PS> Set-Alias -Name k Value kubectl
 ```
 
 Examples of usage
 
-``` bash
-PS>k get nodes
+``` powershell
+PS> k get nodes
 
-PS>k config view
+PS> k config view
 
 PS> k apply -f ./somepfile.yml
 
-PS>k get pods --all-namespaces
+PS> k get pods --all-namespaces
 ```
