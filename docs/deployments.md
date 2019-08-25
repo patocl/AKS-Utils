@@ -15,7 +15,3 @@ PS> kubectl rollout history deploy <webapp>
 ``` powershell
 PS> kubectl rollout undo deploy <webapp>
 ```
-
-``` powershell
-PS> kubectl rollout undo deploy <webapp>
-```

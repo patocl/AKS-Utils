@@ -55,12 +55,32 @@ Then minikube is for you.
 
 Review this <https://minikube.sigs.k8s.io/docs/start/windows> if need more help.
 
-### creating a new switch adapter network on Hyper-V
+I used chocolatey in my case
 
-Run this commands on powershell
+Installing chocolatey on powershell, should be recomendable u start new powershell as administrator
 
 ``` powershell
-PS> New-VMSwitch -name ExternalSwitch -NetAdapterName <network-adaoter-name> -AllowManagementOS $true
+PS> Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+
+installing minikube
+
+``` powershell
+PS> choco install minikube
+```
+
+### creating a new switch adapter network on Hyper-V
+
+Run this commands on powershell to create a new network adapter
+
+``` powershell
+PS> New-VMSwitch -name ExternalSwitch -NetAdapterName <network-adapter-name> -AllowManagementOS $true
+```
+
+Asociate the interface to minikube, if network interface have a name with spaces use "network-adapter-name"
+
+``` powershell
+PS> minikube config set hyperv-virtual-switch <network-adapter-name>
 ```
 
 ### Install and start minikube
