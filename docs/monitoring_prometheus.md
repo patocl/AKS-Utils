@@ -228,3 +228,13 @@ to create & configure Alertmanager and Prometheus instances using the Operator.
 ```
 
 ## Postconfiguration
+
+to expose the service to the host or to internet if is on cloud, you could edit the service called monitoring-grafana
+
+``` powershell
+PS> kubectl edit -n monitoring service/monitoring-grafana
+```
+
+and change CLusterIP by LoadBalancer
+save
+

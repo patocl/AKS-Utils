@@ -164,3 +164,75 @@ PS> & minikube docker-env | Invoke-Expression
 ```
 
 note: don't forgot & character :D, after run this command you couldn't see any output
+
+### To start and stop a minikube virtual machine
+
+``` powershell
+PS> minikube start
+```
+
+``` powershell
+PS> & minikube stop
+```
+
+### Dealing with minikube and real cluster on cloud
+
+Minikube configure your PC to tun locally, and change the context to be local for any command like kubectl, etc.
+
+To switch between context
+
+Listing the context
+
+``` powershell
+PS> kubectl config get-contexts
+CURRENT   NAME                        CLUSTER                     AUTHINFO                                                NAMESPACE
+          daplatform0101l-mllab-aks   daplatform0101l-mllab-aks   clusterUser_z0euw1ldmrsg054_daplatform0101l-mllab-aks
+*         minikube                    minikube                    minikube
+```
+
+Switch to other context
+
+``` powershell
+PS> config use-context CONTEXT_NAME
+```
+
+### A faster shortcut to the standard kubectl commands is to use **kubectx**
+
+You must install package first
+
+``` powershell
+PS> choco install kubectx-ps
+```
+
+*List contexts: kubectx
+    *Equivalent to kubectl config get-contexts
+*Switch context (to foo): kubectx foo
+    *Equivalent to kubectl config use-context foo
+
+## Unistalling minikube
+
+This will remove the virtual machine, but not delete the minikube app
+
+``` powershell
+PS> minikube delete
+```
+
+## Some aditional commands
+
+Show dashboard
+
+``` powershell
+PS> minikube dashboard
+```
+
+Show the external IP associated to minikube
+
+``` powershell
+PS> minikube ip
+```
+
+Show minikube status
+
+``` powershell
+Ps> minikube status
+```

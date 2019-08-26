@@ -77,6 +77,12 @@ Output
 PS> kubectl get pods
 ```
 
+## Get a shell to the running Container (Pod)
+
+``` powershell
+kubectl exec -<name_pod> -- /bin/bash
+```
+
 ## To review logs
 
 ``` powershell
@@ -93,6 +99,28 @@ PS> kubectl describe ingress basic-routing
 
 ``` powershell
 PS> kubectl delete po --all
+```
+
+## Manypulating contracts
+
+Contracttype could be, pod, service, deployment, ingress, etc
+
+contractname it's the name of the instance of any contracttype
+
+### Editing Contract
+
+When you execute this, the contract it's showed on any default editor. On my case in windows, it's pop up a Notepad application, the comand will be waiting until u edit the file, save and close it
+
+``` powershell
+PS> kubectl edit <contracttype> <contractname>
+```
+
+### Describing contract
+
+Useful information about a element of cuibernetes (contractype)
+
+``` powershell
+kubectl describe <contracttype> <contractname>
 ```
 
 ## Tips
