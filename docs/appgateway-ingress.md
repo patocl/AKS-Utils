@@ -37,7 +37,29 @@ spec:
         backend:
           serviceName: test
           servicePort: 80
-``` 
+```
+
+Another example
+
+``` yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: name-virtual-host-ingress
+spec:
+  rules:
+  - host: foo.bar.com
+    http:
+      paths:
+      - backend:
+          serviceName: service1
+          servicePort: 80
+  - host: bar.foo.com
+    http:
+      paths:
+      - backend:
+          serviceName: service2
+          servicePort: 80
+```
 
 if you want to know more about sintaxis or capabilities than u can configure please visit <https://kubernetes.io/docs/concepts/services-networking/ingress/>
-
