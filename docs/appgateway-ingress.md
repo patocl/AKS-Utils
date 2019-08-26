@@ -13,3 +13,31 @@ If you want detailed documentation please review too <https://azure.github.io/ap
 ## Videos related
 
 I want to comment some interesting videos related to How to configure, What is, and etc.
+
+![ngix-ingrex diagram](assests/kubernetes-ingress.png)
+
+![ngix-ingrex diagram](assests/kubernetes-ingress.jpg)
+
+## Structure of ingress file
+
+This is a minimal definition of ingress controller file, write on YAML too
+
+``` yaml
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: test-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /testpath
+        backend:
+          serviceName: test
+          servicePort: 80
+``` 
+
+if you want to know more about sintaxis or capabilities than u can configure please visit <https://kubernetes.io/docs/concepts/services-networking/ingress/>
+
